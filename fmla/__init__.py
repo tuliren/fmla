@@ -1,4 +1,5 @@
 """FMLA package."""
+
 from typing import NoReturn
 
 

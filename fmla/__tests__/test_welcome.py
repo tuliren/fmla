@@ -1,6 +1,6 @@
 """Test welcome message functionality."""
+
 from unittest.mock import patch
-import pytest
 
 from fmla import welcome
 

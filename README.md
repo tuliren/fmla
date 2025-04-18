@@ -11,7 +11,7 @@ pip install fmla
 ## Usage
 
 ```python
-import fmla  # Will display welcome message
+import fmla
 ```
 
 ## Development

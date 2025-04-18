@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fmla"
-version = "0.1.0"
+version = "0.0.1"
 description = "FMLA Python package"
 authors = ["Liren Tu <liren@starfish.sh>"]
 readme = "README.md"
