@@ -1,0 +1,27 @@
+{
+  "name": "fmla",
+  "version": "0.0.1",
+  "description": "A Python package that displays a welcome message when imported.",
+  "keywords": [
+    "fmla",
+    "pip",
+    "pipped"
+  ],
+  "homepage": "https://github.com/tuliren/fmla#readme",
+  "bugs": {
+    "url": "https://github.com/tuliren/fmla/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuliren/fmla.git"
+  },
+  "license": "MIT",
+  "author": "Pipped Engineer",
+  "type": "commonjs",
+  "scripts": {
+    "lint": "poetry run flake8 fmla && poetry run mypy fmla",
+    "format:check": "poetry run black --check fmla && poetry run isort --check-only fmla",
+    "format:write": "poetry run black fmla && poetry run isort fmla",
+    "test": "poetry run pytest"
+  }
+}
