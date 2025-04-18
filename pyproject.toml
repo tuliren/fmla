@@ -2,7 +2,7 @@
 name = "fmla"
 version = "0.0.1"
 description = "FMLA Python package"
-authors = ["Liren Tu <liren@starfish.sh>"]
+authors = ["Pipped Engineer <pipped@amazon.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
