@@ -22,6 +22,6 @@
     "lint": "poetry run flake8 fmla && poetry run mypy fmla",
     "format:check": "poetry run black --check fmla && poetry run isort --check-only fmla",
     "format:write": "poetry run black fmla && poetry run isort fmla",
-    "test": "poetry run pytest"
+    "test": "poetry run pytest -v"
   }
 }
