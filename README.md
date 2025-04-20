@@ -1,6 +1,6 @@
-# FMLA
+# `pip install fmla`
 
-A humorous Python package with CLI tools to help navigate Performance Improvement Plans (PIP) and Family Medical Leave Act (FMLA) situations. It displays a welcome message when imported and provides helpful commands for those facing workplace challenges.
+A sarcastic Python package with CLI tools to help navigate Performance Improvement Plans (PIP) and Family Medical Leave Act (FMLA) situations. It displays a welcome message when imported and provides helpful commands for those facing workplace challenges.
 
 ## Installation
 
@@ -10,11 +10,7 @@ pip install fmla
 
 ## Usage
 
-```python
-import fmla
-```
-
-### CLI Commands
+### Under commandline
 
 FMLA provides CLI commands to help navigate performance improvement plans:
 
@@ -26,6 +22,14 @@ fmla info
 fmla guide
 ```
 
+### Programmatically
+
+```python
+import fmla
+```
+
+This package currently does not provide any programmatic functionality.
+
 ## Development
 
 This project uses Poetry for dependency management.
@@ -33,6 +37,9 @@ This project uses Poetry for dependency management.
 ```bash
 # Install dependencies
 poetry install
+
+# Run commands locally
+poetry run fmla info
 
 # Run tests
 poetry run pytest
