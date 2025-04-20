@@ -16,17 +16,14 @@ import fmla
 
 ### CLI Commands
 
-FMLA provides several CLI commands to help navigate performance improvement plans:
+FMLA provides CLI commands to help navigate performance improvement plans:
 
 ```bash
 # Show information about PIP
 fmla info
 
-# Show guide on dealing with PIP mentally
+# Show guide on dealing with PIP mentally and FMLA information
 fmla guide
-
-# Show information about FMLA and steps to take
-fmla fmla
 ```
 
 ## Development

@@ -2,7 +2,7 @@
 
 from unittest.mock import patch
 
-from fmla.cli import get_fmla_info, get_pip_guide, get_pip_info, main
+from fmla.cli import get_pip_guide, get_pip_info, main
 
 
 def test_get_pip_info() -> None:
@@ -14,19 +14,14 @@ def test_get_pip_info() -> None:
 
 
 def test_get_pip_guide() -> None:
-    """Test that PIP guide is returned."""
+    """Test that PIP guide is returned with FMLA information."""
     guide = get_pip_guide()
     assert isinstance(guide, str)
-    assert "Mental Guide to Surviving a PIP" in guide
+    assert "Guide to Surviving a PIP and Using FMLA" in guide
+    assert "MENTAL STRATEGIES:" in guide
+    assert "FMLA INFORMATION:" in guide
+    assert "FMLA: Family and Medical Leave Act" in guide
     assert len(guide) > 0
-
-
-def test_get_fmla_info() -> None:
-    """Test that FMLA info is returned."""
-    info = get_fmla_info()
-    assert isinstance(info, str)
-    assert "FMLA: Family and Medical Leave Act" in info
-    assert len(info) > 0
 
 
 def test_main_info_command() -> None:
@@ -40,23 +35,15 @@ def test_main_info_command() -> None:
 
 
 def test_main_guide_command() -> None:
-    """Test that guide command works."""
+    """Test that guide command works with FMLA information."""
     with patch("builtins.print") as mock_print:
         result = main(["guide"])
         assert result == 0
         mock_print.assert_called_once()
         args, _ = mock_print.call_args
-        assert "Mental Guide to Surviving a PIP" in args[0]
-
-
-def test_main_fmla_command() -> None:
-    """Test that fmla command works."""
-    with patch("builtins.print") as mock_print:
-        result = main(["fmla"])
-        assert result == 0
-        mock_print.assert_called_once()
-        args, _ = mock_print.call_args
-        assert "FMLA: Family and Medical Leave Act" in args[0]
+        assert "Guide to Surviving a PIP and Using FMLA" in args[0]
+        assert "MENTAL STRATEGIES:" in args[0]
+        assert "FMLA INFORMATION:" in args[0]
 
 
 def test_main_no_args() -> None:

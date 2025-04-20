@@ -24,10 +24,11 @@ def get_pip_info() -> str:
 
 
 def get_pip_guide() -> str:
-    """Return guide on dealing with PIP mentally."""
+    """Return guide on dealing with PIP mentally and FMLA information."""
     return (
-        "Mental Guide to Surviving a PIP\n"
+        "Guide to Surviving a PIP and Using FMLA\n"
         "\n"
+        "MENTAL STRATEGIES:\n"
         "1. Don't panic - a PIP doesn't automatically mean termination\n"
         "2. Read between the lines - understand if this is a genuine\n"
         "   improvement plan or just documentation for eventual termination\n"
@@ -36,17 +37,13 @@ def get_pip_guide() -> str:
         "4. Consider your options:\n"
         "   - Work to meet the goals (if they're actually achievable)\n"
         "   - Start looking for a new job (always a good idea when on a PIP)\n"
-        "   - Explore FMLA options (run 'fmla fmla' for more info)\n"
+        "   - Explore FMLA options (see below)\n"
         "5. Protect your mental health - a PIP is stressful, take care of\n"
         "   yourself\n"
         "6. Remember: your worth is not defined by a corporate evaluation\n"
-        "   process"
-    )
-
-
-def get_fmla_info() -> str:
-    """Return information about FMLA and steps to take."""
-    return (
+        "   process\n"
+        "\n"
+        "FMLA INFORMATION:\n"
         "FMLA: Family and Medical Leave Act\n"
         "\n"
         "FMLA provides eligible employees with job-protected leave for\n"
@@ -86,10 +83,9 @@ def main(args: Optional[List[str]] = None) -> int:
     subparsers.add_parser("info", help="Show information about PIP")
 
     # Guide command
-    subparsers.add_parser("guide", help="Show guide on dealing with PIP mentally")
-
-    # FMLA command
-    subparsers.add_parser("fmla", help="Show information about FMLA and steps to take")
+    subparsers.add_parser(
+        "guide", help="Show guide on dealing with PIP mentally and FMLA information"
+    )
 
     parsed_args = parser.parse_args(args)
 
@@ -97,8 +93,6 @@ def main(args: Optional[List[str]] = None) -> int:
         print(get_pip_info())
     elif parsed_args.command == "guide":
         print(get_pip_guide())
-    elif parsed_args.command == "fmla":
-        print(get_fmla_info())
     else:
         parser.print_help()
         return 1
