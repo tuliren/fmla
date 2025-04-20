@@ -1,4 +1,4 @@
-# `pip install fmla`
+# PIP FMLA
 
 A sarcastic Python package with CLI tools to help navigate Performance Improvement Plans (PIP) and Family Medical Leave Act (FMLA) situations. It displays a welcome message when imported and provides helpful commands for those facing workplace challenges.
 
