@@ -14,6 +14,21 @@ pip install fmla
 import fmla
 ```
 
+### CLI Commands
+
+FMLA provides several CLI commands to help navigate performance improvement plans:
+
+```bash
+# Show information about PIP
+fmla info
+
+# Show guide on dealing with PIP mentally
+fmla guide
+
+# Show information about FMLA and steps to take
+fmla fmla
+```
+
 ## Development
 
 This project uses Poetry for dependency management.
