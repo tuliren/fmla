@@ -5,7 +5,6 @@ from typing import List
 def get_welcome_messages() -> List[str]:
     """Return list of welcome messages."""
     return [
-        "Welcome to FMLA package!",
         "Welcome to FMLA! Your career's last-ditch life preserver!",
         "PIP got you down? FMLA's got your back!",
         "Congrats on your 'development opportunity' (PIP). Time for FMLA!",
