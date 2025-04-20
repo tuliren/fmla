@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "fmla"
 version = "0.0.1"
-description = "FMLA Python package"
+description = "A humorous Python package with CLI tools to help navigate Performance Improvement Plans (PIP) and Family Medical Leave Act (FMLA) situations"
 authors = ["Pipped Engineer"]
 readme = "README.md"
 
